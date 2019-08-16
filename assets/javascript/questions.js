@@ -1,5 +1,10 @@
 const quizQuestions = [
   {
+    question: "what does a chicken say _____ ",
+    choices: ["cluck", "uck", "yuck", "ruff"],
+    correctAnswer: "cluck",
+  },
+  {
     question: "what does a dog say _____ ",
     choices: ["woof", "boof", "moof", "goof"],
     correctAnswer: "woof",
