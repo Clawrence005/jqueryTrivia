@@ -12,12 +12,14 @@ function countdown() {
     timeIsUp();
   }
 }
+
 function nextQuestion() {
   // if currentQuestion is equal to the index of last question we are at the end.
   const isQuizOver = currentQuestion === (quizQuestions.length - 1);
+  //if the game is over call the function to display the results
   if (isQuizOver) {
     console.log("game over");
-    $('#game').html(`<p>Game over</p>`)
+    displayResult();
   }
   else {
     currentQuestion++;
@@ -70,16 +72,28 @@ $(document).on('click', '.choice', function () {
   }
 });
 
-function displayResults() {
+function displayResult() {
   const result = `
-  <p>You get ${score} questions right</p>
-  <p>You missed ${losses} questions right</p>
-  <p>Total Questions ${quizQuestions.length} questions right</p>
-  <button>Reset Game</button>
-  `
+ <h2>Game over</h2>
+  <p>You got ${score} /${quizQuestions.length} questions right</p>
+  <p>You missed ${losses}/${quizQuestions.length} questions</p>
+  <p>You got ${score / quizQuestions.length * 100}% of the questions right</p>
+  <button class="btn btn-primary" id="reset">Reset Game</button>
+  `;
+  $('#game').html(result);
+  console.log(`score : ${score}, losses: ${losses} out of ${quizQuestions.length} questions `)
 }
+// function reset() {
+$(document).on('click', '#reset', function () {
+  console.log('reset clicked')
+  counter = 3;
+  currentQuestion = 0;
+  score = 0;
+  losses = 0;
+  timer;
+})
+// };
 
-$('#game').html(result);
 
 
 //start game
