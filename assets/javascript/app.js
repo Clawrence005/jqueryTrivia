@@ -1,5 +1,5 @@
 // intial values
-let counter = 3;
+let counter = 5;
 let currentQuestion = 0;
 let score = 0;
 let losses = 0;
@@ -86,11 +86,12 @@ function displayResult() {
 // function reset() {
 $(document).on('click', '#reset', function () {
   console.log('reset clicked')
-  counter = 3;
+  counter = 5;
   currentQuestion = 0;
   score = 0;
   losses = 0;
-  timer;
+  timer = null;
+  loadQuestion();
 })
 // };
 
