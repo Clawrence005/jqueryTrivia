@@ -1,7 +1,40 @@
-
+body{
+  font-family: 'DM Sans', sans-serif;
+}
+.jumbotron{
+  text-align: center;
+  background-color: #e9ecef;
+  color:  black;
+}
+.gold-text{
+  color:  #ffc400;
+}
 .choice{
-  border: 1px solid lightgrey;
-  padding: 10px;
+  background-color: #e9ecef;
   border-radius: 4px;
-cursor: pointer;
+  padding: 10px;
+  cursor: pointer;
+}
+.choice:hover {
+  background-color: lightgrey;
+}
+#left-column{
+  background-color: pink;
+  border-radius: 4px;
+  margin: 10px;
+  padding: 10px;
+}
+
+#right-column{
+  background-color: pink;
+  border-radius: 4px;
+  margin: 10px;
+  padding: 10px;
+}
+.image{
+  width: 100%;
+}
+
+#result-div{
+  padding: 20px;
 }

@@ -5,23 +5,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Trivia</title>
+  <title>30 Rock Trivia</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
   <div class="container">
     <div class="jumbotron">
-      <h1>
-        Trivia
-      </h1>
-      <button class="btn btn-warning" id="start">start game
-      </button>
+      <h1><strong><span class="gold-text">3O</span> ROCK</strong></h1>
+      <h1><strong>Trivia</strong></h1>
     </div>
-    <h2 id="time"></h2>
-    <div id="game"></div>
-    <div id="image"></div>
+    <div>
+      <h2 id="time"></h2>
+    </div>
+    <div class="row">
+      <div class="col-sm" id="left-column">
+        <div id="game"></div>
+      </div> <button class="btn btn-warning" id="start">start game</button>
+      <div class="col-sm" id="right-column">
+        <div id="image"></div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
